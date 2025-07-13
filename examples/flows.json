@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1561db5e47578c2b",
+        "type": "inject",
+        "z": "e1ac57889053f530",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "abc",
+        "payloadType": "date",
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "057c55dafcb6ff89"
+            ]
+        ]
+    },
+    {
+        "id": "057c55dafcb6ff89",
+        "type": "mnodehttp-instance",
+        "z": "e1ac57889053f530",
+        "name": "vanilla from manual",
+        "server": "f7fbeef4b0fe51b3",
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "a543c1212dc41283",
+                "dcb734d612dcb830"
+            ]
+        ]
+    },
+    {
+        "id": "a543c1212dc41283",
+        "type": "debug",
+        "z": "e1ac57889053f530",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f7fbeef4b0fe51b3",
+        "type": "mnodehttp-config",
+        "iname": "vanila",
+        "host": "localhost",
+        "port": "8083",
+        "wshost": "localhost",
+        "wsport": "3999",
+        "pathstosites": "",
+        "pathtoyss": "",
+        "ysswsurl": "ws://localhost:3999/"
+    }
+]
